@@ -18,40 +18,35 @@ public class CalculadoraApp {
         Scanner consola = new Scanner(System.in);
         opcion = Integer.parseInt(consola.nextLine());
 
-        switch (opcion){
-            case 1:
-                System.out.println("Proporciona el primer valor : ");
-                operando1 = Integer.parseInt(consola.nextLine());
-                System.out.println("Proporciona el segundo valor");
-                operando2 = Integer.parseInt(consola.nextLine());
-                resultado = operando1 + operando2;
-                System.out.println("Resultado: " + resultado);
-                break;
-            case 2:
-                System.out.println("Proporciona el primer valor : ");
-                operando1 = Integer.parseInt(consola.nextLine());
-                System.out.println("Proporciona el segundo valor");
-                operando2 = Integer.parseInt(consola.nextLine());
-                resultado = operando1 - operando2;
-                System.out.println("Resultado: " + resultado);
-                break;
-            case 3:
-                System.out.println("Proporciona el primer valor : ");
-                operando1 = Integer.parseInt(consola.nextLine());
-                System.out.println("Proporciona el segundo valor");
-                operando2 = Integer.parseInt(consola.nextLine());
-                resultado = operando1 * operando2;
-                System.out.println("Resultado: " + resultado);
-            case 4:
-                System.out.println("Proporciona el primer valor : ");
-                operando1 = Integer.parseInt(consola.nextLine());
-                System.out.println("Proporciona el segundo valor");
-                operando2 = Integer.parseInt(consola.nextLine());
-                resultado = operando1 / operando2;
-                System.out.println("Resultado: " + resultado);
-                break;
+        if(opcion >=1 && opcion <= 4 ){
+            System.out.println("Proporciona el primer valor : ");
+            operando1 = Integer.parseInt(consola.nextLine());
+            System.out.println("Proporciona el segundo valor");
+            operando2 = Integer.parseInt(consola.nextLine());
+            switch (opcion){
+                case 1:
+                    resultado = operando1 + operando2;
+                    System.out.println("Resultado: " + resultado);
+                    break;
+                case 2:
 
+                    resultado = operando1 - operando2;
+                    System.out.println("Resultado: " + resultado);
+                    break;
+                case 3:
+
+                    resultado = operando1 * operando2;
+                    System.out.println("Resultado: " + resultado);
+                case 4:
+                    resultado = operando1 / operando2;
+                    System.out.println("Resultado: " + resultado);
+                    break;
+                default:
+                    System.out.println("Opción no válida");
+                    break;
+            }
         }
+
 
 
     }
