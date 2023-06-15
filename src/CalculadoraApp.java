@@ -46,8 +46,12 @@ public class CalculadoraApp {
                     break;
             }
         }
-
-
+    else if (opcion  == 5) {
+            System.out.println("Hasta pronto");
+    }
+    else {
+            System.out.println("Opción erronea");
+        }
 
     }
 }
